@@ -1,0 +1,124 @@
+/* Horizontal Navigation */
+
+.nav {
+    list-style-type: none;
+    overflow: hidden;
+    position: sticky;
+    margin: 0%;
+    padding: 0%;
+    top: 0;
+    width: 100%;
+    /* border: 1px solid #e7e7e7; */
+    background-color: white;
+    transition: top 0.3s;
+    z-index: 10;
+}
+.navfloatleft {margin-left: 5%;}
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    font-weight:bolder;
+}
+li  a {
+    display: block;
+    text-align: center;
+    padding: 16px 8px;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif
+}
+li a:hover {
+    background-color:silver;
+    color:white;
+}
+.navfloatright {
+    float: right;
+}
+
+/* ====================================================== */
+/* Text In Banner */
+
+.textinbannercontainer {
+    position: relative;
+}
+.textinbanner {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    text-align: left;
+    color:white;
+    font-size: 100%;
+  }
+.imgbanner {
+    width: 100%;
+    height: auto;
+    opacity: 1;   
+}
+.textinbanner > h1 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* ====================================================== */
+/* Body content with image sibe by side */
+
+.imagesidebyside {  
+    margin-top: -3px; 
+    padding: 2% 5%;
+    background-color: #EFEFEF;
+}   
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .column {
+    justify-content: space-between;
+}
+  .column img {
+    padding: 3%;
+    justify-content: space-between;
+  }
+  .row::after {   /* Clearfix (clear floats) */
+    content: "";
+    clear: both;
+    display: table;
+  }
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .row {
+      flex-direction: column;
+      flex:100%;
+    }
+    .column {
+      justify-content: center;
+      max-width: 100%;
+    }  
+}
+
+
+/* ====================================================== */
+/* Text divided by 3 col */
+.textrow {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2% 5%;
+    background-color: #F7F7F7;
+  }
+.textrow {
+    display: flex;
+}
+.textcol { /* Create three equal columns that floats next to each other */
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: auto;
+}
+.textrow:after {   /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+}
+.textcol > h2 {
+  font-family: 'Times New Roman', Times, serif;
+}
